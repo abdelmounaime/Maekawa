@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TP MAEKAWA</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="static/js/jquery/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="static/js/bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Maekawa Project</a>
+            <a class="navbar-brand " href="#" style="position: fixed; float: right; right: 0%" >Realised by : Bouroudi-Haneche G2 SIQ ESI</a>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>Algorithme de Maekawa</h1>
+        <p>
+            C'est un algorithme d'exclusion mutuelle sur un système distribué.
+            Dans l'algorithme de Maekawa, chaque composant appelé « site » ne peut donner de permission d'entrée dans une section critique qu'à un seul autre composant à la fois. Chaque site a la charge d'arbitrer les éventuels conflits qui apparaîtront entre différents autres sites. Cela impose au participant à qui cette permission a été donnée de rendre la main sur la section critique spontanément une fois qu'il a fini son travail, c'est-à-dire lorsqu'il sort de sa section critique
+        </p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Application pour 10 sites &raquo;</a></p>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3" id="site0">
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-title text-center"><h3>Site 1</h3></div>
+                <div class="panel-body">
+                            <div class="table-wrapper-2">
+                                <table class="table table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>Horloge</th>
+                                            <th>Env</th>
+                                            <th>Rec</th>
+                                            <th>Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="data">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                </div>
+                <div class="panel-footer">
+                    <legend>Horloge local : <div class="timestamp"></div></legend>
+                    <legend>Section Critique :
+                        <button type="button" class="btn btn-primary btn-lg cr">Hors Section Critique</button>
+                    </legend>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" id="site1">
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-title text-center"><h3>Site 2</h3></div>
+                <div class="panel-body">
+                    <div class="table-wrapper-2">
+                        <table class="table table-responsive">
+                            <thead>
+                            <tr>
+                                <th>Horloge</th>
+                                <th>Env</th>
+                                <th>Rec</th>
+                                <th>Type</th>
+                            </tr>
+                            </thead>
+                            <tbody class="data">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <legend>Horloge local : <div class="timestamp"></div></legend>
+                    <legend>Section Critique :
+                        <button type="button" class="btn btn-primary btn-lg cr">Hors Section Critique</button>
+                    </legend>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" id="site2">
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-title text-center"><h3>Site 3</h3></div>
+                <div class="panel-body">
+                    <div class="table-wrapper-2">
+                        <table class="table table-responsive">
+                            <thead>
+                            <tr>
+                                <th>Horloge</th>
+                                <th>Env</th>
+                                <th>Rec</th>
+                                <th>Type</th>
+                            </tr>
+                            </thead>
+                            <tbody class="data">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <legend>Horloge local : <div class="timestamp"></div></legend>
+                    <legend>Section Critique :
+                        <button type="button" class="btn btn-primary btn-lg cr">Hors Section Critique</button>
+                    </legend>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" id="site3">
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-title text-center"><h3>Site 4</h3></div>
+                <div class="panel-body">
+                    <div class="table-wrapper-2">
+                        <table class="table table-responsive">
+                            <thead>
+                            <tr>
+                                <th>Horloge</th>
+                                <th>Env</th>
+                                <th>Rec</th>
+                                <th>Type</th>
+                            </tr>
+                            </thead>
+                            <tbody class="data">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <legend>Horloge local : <div class="timestamp"></div></legend>
+                    <legend>Section Critique :
+                        <button type="button" class="btn btn-primary btn-lg cr">Hors Section Critique</button>
+                    </legend>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-3" id="site4">
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-title text-center"><h3>Site 5</h3></div>
+                <div class="panel-body">
+                            <div class="table-wrapper-2">
+                                <table class="table table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>Horloge</th>
+                                            <th>Env</th>
+                                            <th>Rec</th>
+                                            <th>Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="data">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                </div>
+                <div class="panel-footer">
+                    <legend>Horloge local : <div class="timestamp"></div></legend>
+                    <legend>Section Critique :
+                        <button type="button" class="btn btn-primary btn-lg cr">Hors Section Critique</button>
+                    </legend>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" id="site5">
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-title text-center"><h3>Site 6</h3></div>
+                <div class="panel-body">
+                    <div class="table-wrapper-2">
+                        <table class="table table-responsive">
+                            <thead>
+                            <tr>
+                                <th>Horloge</th>
+                                <th>Env</th>
+                                <th>Rec</th>
+                                <th>Type</th>
+                            </tr>
+                            </thead>
+                            <tbody class="data">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <legend>Horloge local : <div class="timestamp"></div></legend>
+                    <legend>Section Critique :
+                        <button type="button" class="btn btn-primary btn-lg cr">Hors Section Critique</button>
+                    </legend>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" id="site6">
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-title text-center"><h3>Site 7</h3></div>
+                <div class="panel-body">
+                    <div class="table-wrapper-2">
+                        <table class="table table-responsive">
+                            <thead>
+                            <tr>
+                                <th>Horloge</th>
+                                <th>Env</th>
+                                <th>Rec</th>
+                                <th>Type</th>
+                            </tr>
+                            </thead>
+                            <tbody class="data">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <legend>Horloge local : <div class="timestamp"></div></legend>
+                    <legend>Section Critique :
+                        <button type="button" class="btn btn-primary btn-lg cr">Hors Section Critique</button>
+                    </legend>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" id="site7">
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-title text-center"><h3>Site 8</h3></div>
+                <div class="panel-body">
+                    <div class="table-wrapper-2">
+                        <table class="table table-responsive">
+                            <thead>
+                            <tr>
+                                <th>Horloge</th>
+                                <th>Env</th>
+                                <th>Rec</th>
+                                <th>Type</th>
+                            </tr>
+                            </thead>
+                            <tbody class="data">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <legend>Horloge local : <div class="timestamp"></div></legend>
+                    <legend>Section Critique :
+                        <button type="button" class="btn btn-primary btn-lg cr">Hors Section Critique</button>
+                    </legend>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-lg-offset-2" id="site8">
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-title text-center"><h3>Site 9</h3></div>
+                <div class="panel-body">
+                            <div class="table-wrapper-2">
+                                <table class="table table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>Horloge</th>
+                                            <th>Env</th>
+                                            <th>Rec</th>
+                                            <th>Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="data">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                </div>
+                <div class="panel-footer">
+                    <legend>Horloge local : <div class="timestamp"></div></legend>
+                    <legend>Section Critique :
+                        <button type="button" class="btn btn-primary btn-lg cr">Hors Section Critique</button>
+                    </legend>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4" id="site9">
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-title text-center"><h3>Site 10</h3></div>
+                <div class="panel-body">
+                    <div class="table-wrapper-2">
+                        <table class="table table-responsive">
+                            <thead>
+                            <tr>
+                                <th>Horloge</th>
+                                <th>Env</th>
+                                <th>Rec</th>
+                                <th>Type</th>
+                            </tr>
+                            </thead>
+                            <tbody class="data">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <legend>Horloge local : <div class="timestamp"></div></legend>
+                    <legend>Section Critique :
+                        <button type="button" class="btn btn-primary btn-lg cr">Hors Section Critique</button>
+                    </legend>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="pline">
+    <div class="site" id="site0"><h3>site 1</h3><div class="hd"><span class="col">H</span><span class="col">S</span><span class="col">R</span><span class="col">type</span></div><div class="data"></div><div class="cr">Section critique</div></div>
+    <div class="site" id="site1"><h3>site 2</h3><div class="hd"><span class="col">H</span><span class="col">S</span><span class="col">R</span><span class="col">type</span></div><div class="data"></div><div class="cr">Section critique</div></div>
+    <div class="site" id="site2"><h3>site 3</h3><div class="hd"><span class="col">H</span><span class="col">S</span><span class="col">R</span><span class="col">type</span></div><div class="data"></div><div class="cr">Section critique</div></div>
+    <div class="site" id="site3"><h3>site 4</h3><div class="hd"><span class="col">H</span><span class="col">S</span><span class="col">R</span><span class="col">type</span></div><div class="data"></div><div class="cr">Section critique</div></div>
+    <div class="site" id="site4"><h3>site 5</h3><div class="hd"><span class="col">H</span><span class="col">S</span><span class="col">R</span><span class="col">type</span></div><div class="data"></div><div class="cr">Section critique</div></div>
+
+
+</div>-->
+<!--<div class="pline">
+    <div class="site" id="site5"><h3>site 6</h3><div class="hd"><span class="col">H</span><span class="col">S</span><span class="col">R</span><span class="col">type</span></div><div class="data"></div><div class="cr">Section critique</div></div>
+    <div class="site" id="site6"><h3>site 7</h3><div class="hd"><span class="col">H</span><span class="col">S</span><span class="col">R</span><span class="col">type</span></div><div class="data"></div><div class="cr">Section critique</div></div>
+    <div class="site" id="site7"><h3>site 8</h3><div class="hd"><span class="col">H</span><span class="col">S</span><span class="col">R</span><span class="col">type</span></div><div class="data"></div><div class="cr">Section critique</div></div>
+    <div class="site" id="site8"><h3>site 9</h3><div class="hd"><span class="col">H</span><span class="col">S</span><span class="col">R</span><span class="col">type</span></div><div class="data"></div><div class="cr">Section critique</div></div>
+    <div class="site" id="site9"><h3>site 10</h3><div class="hd"><span class="col">H</span><span class="col">S</span><span class="col">R</span><span class="col">type</span></div><div class="data"></div><div class="cr">Section critique</div></div>
+</div>-->
+<div id="result"></div>
+</body>
+<script src="static/js/jquery/jquery.js"></script>
+<script>
+    var cpt=0;
+    xhr = function () {
+        $.get('xhr.php?cpt='+cpt,function (data) {
+            if (data!='0'){
+                data = JSON.parse(data);
+
+                if (data.t=="INSC")
+                {
+                  $("#site"+data.id+" button").text("Dans Section Critique");
+                    $("#site"+data.id+" button").removeClass("class","btn-primary").addClass("btn-danger");
+                    setTimeout(function () {
+                        $("#site"+data.id+" button").text("Hors Section Critique");
+                        $("#site"+data.id+" button").removeClass("btn-danger").addClass("class","btn-primary");
+                    },2000)
+                }
+                else
+                {
+
+//                    $("#site"+data.id+' .data').append('<div class="p"><span class="col">'+data.h+'</span><span class="col">'+data.s+'</span><span class="col">'+data.id+'</span><span class="col">'+data.t+'</span></div>');
+                    $("#site"+data.id+' .data').prepend('<tr><td>'+data.h+'</td><td>'+data.s+'</td><td>'+data.id+'</td><td>'+data.t+'</td></tr>');
+                    $("#site"+data.id+' .timestamp').text(data.tl);
+
+                    $("#site"+data.id +" .data").scrollTop($('#site'+data.id+" .data").get()[0].scrollHeight);
+                }
+                cpt++;
+
+            }
+
+        })
+
+    }
+  setInterval(xhr,100);
+
+
+</script>
+</html>
