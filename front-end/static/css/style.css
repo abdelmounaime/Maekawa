@@ -1,0 +1,84 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.site
+{
+    width: 19%;
+    display: inline-block;
+    height: 280px;
+    max-height: 280px;
+    min-height: 280px;
+    overflow:hidden;
+    border: solid 1px rgb(0,170,220);
+    margin-right: 5px;
+}
+.pline
+{
+    display: block;
+    width: 99%;
+    margin: auto;
+    margin-top: 25px;
+}
+.site h3
+{
+    text-align: center;
+    color: white;
+    background-color: rgb(0,170,220);
+    text-transform: uppercase;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+}
+.col
+{
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+
+}
+.hd
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 2px;
+    border-bottom: 1px solid grey;
+    height: 25px;
+    line-height: 25px;
+}
+.hd .col
+{
+    border-right: solid 1px grey;
+}
+
+
+
+.data
+{
+
+    overflow-y: auto;
+    max-height: 150px;
+    min-height: 150px;
+    border-bottom: 1px solid grey;
+}
+.p
+{
+    border-bottom: solid 1px black;
+}
+/*.cr*/
+/*{*/
+    /*text-align: center;*/
+    /*font-size: 2em;*/
+    /*font-weight: bold;*/
+    /*background-color: red;*/
+    /*color: white;*/
+    /*display: none;*/
+/*}*/
+
+.table-wrapper-2 {
+    display: block;
+    max-height: 300px;
+    overflow-y: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
